@@ -1,4 +1,6 @@
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -26,10 +28,20 @@ public class App {
 
         // 3 PASSO : exibir e manipular os dados
         for (Map<String, String> movie: movieList) {
+
+            String urlImg = movie.get(key: "image");
+            String title = movie.get(key: "title");
+
+            InputStream input = new URL(urlImg).openStream();
+            String archive = title + ".png";
+
+            var generate = new StickerGenerate();
+            generate.edited(input, newArchive);
+
             System.out.println(movie.get(key: "title"));
-            System.out.println(movie.get(key: "year"));
-            System.out.println(movie.get(key: "image"));
-            System.out.println(movie.get(key: "imDbRating"));
+            // System.out.println(movie.get(key: "year"));
+            // System.out.println(movie.get(key: "image"));
+            // System.out.println(movie.get(key: "imDbRating"));
             System.out.println();
         }
     }
