@@ -11,7 +11,7 @@ public class StickerGenerate {
     public void edited(InputStream input, String newArchive) throws Exception {
         // leitura de img do diretorio e por URL
         //InputStream input = new FileInputStream(new File("images/TopMovies_.jpg"));
-        InputStream input = new URL("https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies_8.jpg").openStream();
+        // InputStream input = new URL("https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies_8.jpg").openStream();
         BufferedImage poster = ImageIO.read(input);
 
         // cria nova imagem em memoria
@@ -24,14 +24,14 @@ public class StickerGenerate {
         Graphics2D graphics = (Graphics2D) newPoster.getGraphics();
         graphics.drawImage(poster, 0, 0, null);
         // escrever uma frase na nova img
-        graphics.drawString("TEXT", 0, newHeight - 100);
         var font = new Font(Font.SANS_SERIF, Font.BOLD, 64);
         graphics.setFont(font);
         graphics.setColor(Color.YELLOW);
+        graphics.drawString("TEXT", 0, newHeight - 100);
 
         // escrever a nova img em um arquivo
         // ImageIO.write(newPoster, "png", new File("return/editedImg.png"));
-        ImageIO.write(novaImagem, "png", new File(newArchive));
+        ImageIO.write(newPoster, "png", new File(newArchive));
     }
 
     // esse pedaço de código na vdd fica na pasta App
