@@ -23,17 +23,18 @@ public class StickerGenerate {
         // copia a img original para nova img(em memoria)
         Graphics2D graphics = (Graphics2D) newPoster.getGraphics();
         graphics.drawImage(poster, 0, 0, null);
+
         // escrever uma frase na nova img
         var font = new Font(Font.SANS_SERIF, Font.BOLD, 64);
         graphics.setFont(font);
         graphics.setColor(Color.YELLOW);
-        graphics.drawString("TEXT", 0, newHeight - 100);
+        graphics.drawString("TEXT", width / 2, newHeight - 100);
 
         // escrever a nova img em um arquivo
         // ImageIO.write(newPoster, "png", new File("return/editedImg.png"));
         ImageIO.write(newPoster, "png", new File(newArchive));
     }
-
+    
     // esse pedaço de código na vdd fica na pasta App
     // public static void main(String[] args) throws Exception {
     //     var generate = new StickerGenerate();

@@ -2,10 +2,12 @@ public class Content {
 
     private final String title;
     private final String urlImg;
+    private final String star;
 
-    public Content(String title, String urlImg) {
+    public Content(String title, String urlImg, String star) {
         this.title = title;
         this.urlImg = urlImg;
+        this.star = star;
     }
 
     public String getTitle() {
@@ -16,4 +18,7 @@ public class Content {
         return urlImg;
     }
 
+    public String getStar() {
+        return star;
+    }
 }

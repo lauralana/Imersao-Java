@@ -22,12 +22,20 @@ public class App {
             Content obj = objList.get(i);
 
             InputStream input = new URL(obj.getUrlImg()).openStream();
-            String archive = obj.getTitle() + ".png";
+            String archive = "return/" + obj.getTitle() + ".png";
 
             var generate = new StickerGenerate();
             generate.edited(input, archive);
 
             System.out.println(obj.getTitle());
+            System.out.println(obj.getUrlImg());
+            
+            var rating = Double.parseDouble(obj.getStar());
+            int starNumber = (int) rating;
+            for(int n = 1; n <= starNumber; n ++){
+                System.out.print("🌟");
+            }
+            System.out.println("\n");
             System.out.println();
         }
     }
