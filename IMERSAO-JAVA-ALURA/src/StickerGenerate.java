@@ -28,7 +28,7 @@ public class StickerGenerate {
         var font = new Font(Font.SANS_SERIF, Font.BOLD, 64);
         graphics.setFont(font);
         graphics.setColor(Color.YELLOW);
-        graphics.drawString("TEXT", width / 2, newHeight - 100);
+        graphics.drawString("TEXT", 0, newHeight - 100);
 
         // escrever a nova img em um arquivo
         // ImageIO.write(newPoster, "png", new File("return/editedImg.png"));

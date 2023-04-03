@@ -17,7 +17,10 @@ public class App {
         // ContentExtractor extract = new ExtractorNasaAPI();
         // List<Content> objList = extract.extractor(JSON);
 
-        ContentExtractor extract = new ExtractorAluraAPI();
+        // ContentExtractor extract = new ExtractorAluraAPI();
+        // List<Content> objList = extract.extractor(JSON);
+
+        ContentExtractor extract = new ExtractorLanguagesAPI();
         List<Content> objList = extract.extractor(JSON);
 
         for (int i = 0; i < 3; i ++ ) {
