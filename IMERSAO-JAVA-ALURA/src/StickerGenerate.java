@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 public class StickerGenerate {
     
     public void edited(InputStream input, String newArchive) throws Exception {
-        // leitura de img do diretorio e por URL
+        // leitura de img do diretório e por URL
         //InputStream input = new FileInputStream(new File("images/TopMovies_.jpg"));
         // InputStream input = new URL("https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies_8.jpg").openStream();
         BufferedImage poster = ImageIO.read(input);
@@ -34,7 +34,7 @@ public class StickerGenerate {
         // ImageIO.write(newPoster, "png", new File("return/editedImg.png"));
         ImageIO.write(newPoster, "png", new File(newArchive));
     }
-    
+
     // esse pedaço de código na vdd fica na pasta App
     // public static void main(String[] args) throws Exception {
     //     var generate = new StickerGenerate();

@@ -16,8 +16,8 @@ public class ExtractorAluraAPI implements ContentExtractor {
 
         String title = attributes.get("title");
         String urlImg = attributes.get("image");
-        String star = attributes.get("imDbRating");
-        var obj = new Content(title, urlImg, star);
+        // String star = attributes.get("imDbRating");
+        var obj = new Content(title, urlImg);
 
         objList.add(obj);
         }
